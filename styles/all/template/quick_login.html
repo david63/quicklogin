@@ -1,0 +1,60 @@
+<div id="quick-login-bg" class="quick-login-bg"></div>
+
+<form method="post" action="{{ S_LOGIN_ACTION }}">
+	<div class="panel" id="quick-login-panel">
+		<div class="inner">
+			<div class="content">
+				<a href="#" class="close"></a>
+				<h3><a href="{{ U_LOGIN_LOGOUT }}">{{ lang('LOGIN_LOGOUT') }}</a>{% if not S_ADMIN_AUTH and S_REGISTER_ENABLED %}&nbsp; &bull; &nbsp;<a href="{{ U_REGISTER }}">{{ lang('REGISTER') }}</a>{% endif %}</h3>
+
+				<fieldset>
+					<dl class="ql-username">
+						<dt><label for="ql-username">{{ lang('USERNAME') }}{{ lang('COLON') }}</label></dt>
+						<dd class="input-container"><input type="text" tabindex="1" name="username" id="ql-username" size="25" value="{{ USERNAME }}" class="inputbox autowidth" /></dd>
+					</dl>
+
+					<dl class="ql-password">
+						<dt><label for="ql-password">{{ lang('PASSWORD') }}{{ lang('COLON') }}</label></dt>
+						<dd class="input-container"><input type="password" tabindex="2" id="ql-password" name="password" size="25" class="inputbox autowidth" /></dd>
+						{% if U_SEND_PASSWORD_EXT %}
+							<dd class="input-link"><a href="{{ U_SEND_PASSWORD_EXT }}">{{ lang('FORGOT_PASS') }}</a></dd>
+						{% endif %}
+					</dl>
+
+					{% if CAPTCHA_TEMPLATE and S_CONFIRM_CODE %}
+						{% DEFINE CAPTCHA_TAB_INDEX = 3 %}
+						{% INCLUDE ''~ CAPTCHA_TEMPLATE ~'' %}
+					{% endif %}
+				</fieldset>
+
+				<fieldset class="ql-options">
+					{% if S_AUTOLOGIN_ENABLED %}
+						<label for="ql-autologin"><input type="checkbox" name="autologin" id="ql-autologin" tabindex="4" /><span>&nbsp;{{ lang('LOG_ME_IN') }}</span></label><br />
+					{% endif %}
+					<label for="ql-viewonline"><input type="checkbox" name="viewonline" id="ql-viewonline" tabindex="5" /><span>&nbsp;{{ lang('HIDE_ME') }}</span></label>
+				</fieldset>
+
+				<fieldset class="submit-buttons">
+					<input type="submit" name="login" tabindex="6" value="{{ lang('LOGIN') }}" class="button1" />
+					{{ S_LOGIN_REDIRECT }}
+					{{ S_FORM_TOKEN_LOGIN }}
+					{{ S_HIDDEN_FIELDS }}
+				</fieldset>
+
+				{% for mode in loops.ql_oauth %}
+					{% if loop.first %}
+						<hr /><p class="ql-oauth">
+					{% endif %}
+					<a href="{{ mode.REDIRECT_URL }}">{{ mode.SERVICE_NAME }}</a>
+					{% if loop.last %}
+						</p>
+					{% else %}
+						&nbsp;&bull;&nbsp;
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div
+</form>
+
+{% INCLUDEJS '@paybas_quicklogin/quicklogin.js' %}
