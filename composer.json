@@ -31,7 +31,7 @@
         "phpbb/epv": "dev-master"
     },
     "extra": {
-        "display-name": "Quick Login",
+        "display-name": "[+] Quick Login",
         "soft-require": {
             "phpbb/phpbb": ">=3.2.6"
         }
