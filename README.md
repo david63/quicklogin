@@ -11,7 +11,7 @@ Extension for phpBB 3.2 that adds a simple quick login popup lightbox using Java
 ![Screenshot](screenshot.png)
 
 ## Minimum Requirements
-* phpBB 3.2.0
+* phpBB 3.2.6
 * PHP 5.4
 
 ## Features
