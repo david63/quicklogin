@@ -7,6 +7,7 @@ Extension for phpBB 3.2 that adds a simple quick login popup lightbox using Java
 [![Latest Stable Version](https://poser.pugx.org/david63/quicklogin/v/stable)](https://packagist.org/packages/david63/quicklogin)
 [![Latest Unstable Version](https://poser.pugx.org/david63/quicklogin/v/unstable)](https://packagist.org/packages/david63/quicklogin)
 [![Total Downloads](https://poser.pugx.org/david63/quicklogin/downloads)](https://packagist.org/packages/david63/quicklogin)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1cf279e1d7d4434e9ce766d74f16c681)](https://www.codacy.com/manual/david63/quicklogin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=david63/quicklogin&amp;utm_campaign=Badge_Grade)
 
 ![Screenshot](screenshot.png)
 
