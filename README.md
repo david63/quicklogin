@@ -1,19 +1,21 @@
 # Quick Login extension for phpBB
 
-Extension for phpBB 3.2 that adds a simple quick login popup lightbox using JavaScript.
+Extension for phpBB 3.3 that adds a simple quick login popup lightbox using JavaScript.
 
-[![Build Status](https://travis-ci.com/david63/quicklogin.svg?branch=master)](https://travis-ci.com/david63/quicklogin)
+[![Build Status](https://github.com/david63/quicklogin/workflows/Tests/badge.svg)](https://github.com/phpbb-extensions/david63/quicklogin)
 [![License](https://poser.pugx.org/david63/quicklogin/license)](https://packagist.org/packages/david63/quicklogin)
 [![Latest Stable Version](https://poser.pugx.org/david63/quicklogin/v/stable)](https://packagist.org/packages/david63/quicklogin)
 [![Latest Unstable Version](https://poser.pugx.org/david63/quicklogin/v/unstable)](https://packagist.org/packages/david63/quicklogin)
 [![Total Downloads](https://poser.pugx.org/david63/quicklogin/downloads)](https://packagist.org/packages/david63/quicklogin)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1cf279e1d7d4434e9ce766d74f16c681)](https://www.codacy.com/manual/david63/quicklogin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=david63/quicklogin&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/david63/quicklogin/badge)](https://www.codefactor.io/repository/github/david63/quicklogin)
+
+[![Compatible](https://img.shields.io/badge/compatible-phpBB:3.3.x-blue.svg)](https://shields.io/)
 
 ![Screenshot](screenshot.png)
 
 ## Minimum Requirements
-* phpBB 3.2.6
-* PHP 5.4
+* phpBB 3.3.0
+* PHP 7.1.3
 
 ## Features
 - Just a simple lightbox popup for quick login actions.
@@ -34,4 +36,4 @@ Extension for phpBB 3.2 that adds a simple quick login popup lightbox using Java
 ## License
 [GNU General Public License v2](http://opensource.org/licenses/GPL-2.0)
 
-© 2019 - David Wood
+© 2021 - David Wood

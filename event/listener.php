@@ -24,16 +24,16 @@ use phpbb\event\dispatcher_interface;
  */
 class listener implements EventSubscriberInterface
 {
-	/** @var \phpbb\auth\auth */
+	/** @var auth */
 	protected $auth_provider_collection;
 
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
 
 	/** @var dispatcher_interface */
@@ -126,7 +126,7 @@ class listener implements EventSubscriberInterface
 			 * @event paybas.quicklogin.login_forum_box
 			 *
 			 * @var  array  tpl_vars    The template variables
-			 * @var  bool	ql_flag		Flag to indicate on Index page		 
+			 * @var  bool	ql_flag		Flag to indicate on Index page
 			 *
 			 * @since 2.0.2
 			 */
