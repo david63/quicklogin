@@ -1,12 +1,15 @@
+imports:
+    - { resource: alias.yml }
+
 services:
+    _defaults:
+        autowire: true
+        bind:
+            $root_path: '%core.root_path%'
+            $php_ext: '%core.php_ext%'
+        public: true
+
     paybas.quicklogin.listener:
         class: paybas\quicklogin\event\listener
-        arguments:
-            - '@auth.provider_collection'
-            - '@config'
-            - '@template'
-            - '@user'			
-            - '%core.root_path%'
-            - '%core.php_ext%'
         tags:
             - { name: event.listener }
